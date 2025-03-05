@@ -1,0 +1,11 @@
+{
+    "sites": [
+      {
+        "name": "aemblock",
+        "url": "https://main--aemblock--faizanttm.aem.live",
+        "repo": "faizanttm/aemblock",
+        "ref": "main"
+      }
+    ]
+  }
+  
