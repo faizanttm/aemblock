@@ -8,20 +8,27 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  background-color: var(--card-color);
+  border-radius: var(--border-radius-s);
 }
-
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
+.cards > ul > li:hover{
+  box-shadow: var(--shadow-l)
 }
 
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-top-right-radius: var(--border-radius-s);
+  border-top-left-radius: var(--border-radius-s);
+}
+
+.cards .card-body {
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+.cards .card-image {
+  line-height: 0;
 }
