@@ -9,6 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
 
 :root {
   /* colors */
@@ -180,7 +181,6 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
   text-decoration: none;
   word-break: break-word;
 }
