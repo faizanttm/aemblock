@@ -1,1 +1,4 @@
 /* css */
+.btn:hover{text-decoration: none;}
+.btn.btn-lg{padding: .8rem 1.8rem;font-size: 18px;}
+.btn.btn-sm{padding: .3rem .6rem;font-size: 14px;}
