@@ -31,3 +31,8 @@
     order: unset;
   }
 }
+
+main .section.columns-container:nth-child(1) {
+  padding: 118px 0 222px;
+  background-color: var(--light-color);
+}
