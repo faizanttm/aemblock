@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--light-color);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -34,9 +34,9 @@ header nav[aria-expanded='true'] {
   header nav {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
+    gap: 0 47px;
+    max-width: 1326px;
+    padding: 0 15px;
   }
 
   header nav[aria-expanded='true'] {
@@ -220,7 +220,8 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    justify-content: end;
+    gap: 42px;
     margin: 0;
   }
 
@@ -271,7 +272,6 @@ header nav .nav-tools {
 header nav .nav-tools .button {
   margin: 0;
   border: none;
-  padding: 0.5em;
   background: none;
   line-height: 0;
 }

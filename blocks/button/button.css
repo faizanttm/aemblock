@@ -1,4 +1,32 @@
 /* css */
-.btn:hover{text-decoration: none;}
-.btn.btn-lg{padding: .8rem 1.8rem;font-size: 18px;}
-.btn.btn-sm{padding: .3rem .6rem;font-size: 14px;}
+.btn:hover {
+    text-decoration: none;
+}
+
+.btn.btn-lg {
+    padding: .8rem 1.8rem;
+    font-size: 18px;
+}
+
+.btn.btn-sm {
+    padding: .3rem .6rem;
+    font-size: 14px;
+}
+
+.btn {
+    font-weight: 500;
+    padding: 8.5px 14.5px;
+    border-radius: 10px;
+    --bs-btn-border-width: 2px;
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: #3F3F46;
+    --bs-btn-border-color: #A1A1AA;
+    --bs-btn-hover-bg: #A1A1AA;
+    --bs-btn-hover-border-color: #A1A1AA;
+    --bs-btn-active-bg: #A1A1AA;
+    --bs-btn-active-border-color: #A1A1AA;
+    --bs-btn-disabled-color: #A1A1AA;
+    --bs-btn-disabled-border-color: #A1A1AA;
+}
