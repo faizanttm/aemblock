@@ -17,7 +17,6 @@ export default function decorate(block) {
   button.title = title;
   button.ariaLabel = arialabel;
   button.textContent = label;
-  
   console.log('test');
   // Append to block
   block.append(button);
