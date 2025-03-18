@@ -18,12 +18,12 @@
   --light-color: #fafafa;
   --dark-color: #505050;
   --text-color: #3F3F46;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-color: #589E9C;
+  --link-hover-color: #337876;
 
-  --primary-color: #3b63fb;
-  --hover-color: #214aeb;
-  --accent-color: #9e3bfb;
+  --primary-color: #589E9C;
+  --hover-color: #337876;
+  --accent-color: #589E9C;
   --border-color: #E5E7EB;
   --card-color: #ffffff;
   --muted-color: #b5b5b5;
@@ -55,7 +55,7 @@
   --border-radius-xs: 6px;
 
   /* nav heights */
-  --nav-height: 105px;
+  --nav-height: 70px;
   --breadcrumbs-height: 34px;
   --header-height: var(--nav-height);
 }
@@ -124,6 +124,12 @@ footer .footer[data-block-status="loaded"] {
   }
 }
 
+@media (width >= 768px) {
+  :root {
+    --nav-height: 105px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -167,10 +173,6 @@ pre {
   overflow-x: auto;
   white-space: pre;
 }
-
-/* main > div {
-  margin: 40px 16px;
-} */
 
 input,
 textarea,
@@ -241,16 +243,16 @@ main img {
   height: auto;
 }
 
-.icon {
+/* .icon {
   display: inline-block;
   height: 24px;
   width: 24px;
-}
+} */
 
-.icon img {
+/* .icon img {
   height: 100%;
   width: 100%;
-}
+} */
 
 /* sections */
 main > .section {
@@ -260,18 +262,12 @@ main > .section {
 main > .section > div {
   max-width: 1326px;
   margin: auto;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
-
-/* @media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-} */
 
 /* section metadata */
 main .section.light,
@@ -280,3 +276,44 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* hero-banner */
+.hero-banner h1 {
+  font-size: 50px;
+  line-height: 66px;
+  font-weight: 800;
+  max-width: 460px;
+  margin-top: 0;
+  margin-bottom: 46px;
+}
+
+.hero-banner ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 0 56px 0;
+  padding: 0 0 0 20px;
+}
+
+.hero-banner ul li {
+  margin-left: -20px;
+}
+
+.hero-banner ul li:last-child {
+  margin-left: 16px;
+  max-width: 330px;
+}
+
+.hero-banner ul li img {
+  width: 53px;
+  height: 53px;
+  min-width: 53px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.hero-banner p:has(.btn) {
+  margin: 0;
+  display: inline-block;
+}
+/* hero-banner */
