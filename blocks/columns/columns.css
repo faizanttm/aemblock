@@ -1,4 +1,4 @@
-.columns > div {
+.columns>div {
   display: flex;
   flex-direction: column;
 }
@@ -7,32 +7,73 @@
   width: 100%;
 }
 
-.columns > div > div {
+.columns>div>div {
   order: 1;
 }
 
-.columns > div > .columns-img-col {
+.columns>div>.columns-img-col {
   order: 0;
 }
 
-.columns > div > .columns-img-col img {
+.columns>div>.columns-img-col img {
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
+main .hero-banner {
+  padding: 118px 0 222px;
+  background-color: var(--light-color);
+}
+
+@media (width >=900px) {
+  .columns>div {
     align-items: center;
     flex-direction: unset;
     gap: 24px;
   }
 
-  .columns > div > div {
+  .columns>div>div {
     flex: 1;
     order: unset;
   }
 }
 
-main .section.columns-container:nth-child(1) {
-  padding: 118px 0 222px;
-  background-color: var(--light-color);
+@media (width < 900px) {
+  main .hero-banner {
+    padding: 18px 0 122px;
+  }
+
+  .hero-banner h1,
+  .hero-banner ul li:last-child {
+    max-width: 100%;
+  }
+}
+
+@media (width < 768px) {
+  main .hero-banner {
+    padding: 18px 0 80px;
+  }
+
+  .hero-banner h1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (width < 576px) {
+  main .hero-banner {
+    padding: 18px 0 60px;
+  }
+
+  .hero-banner ul {
+    flex-wrap: wrap;
+    margin: 0 0 30px 0;
+  }
+
+  .hero-banner ul li:last-child {
+    margin-left: -20px;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
 }

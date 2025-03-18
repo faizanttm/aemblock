@@ -18,6 +18,22 @@
     padding: 8.5px 14.5px;
     border-radius: 10px;
     --bs-btn-border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-bg: var(--hover-color);
+    --bs-btn-hover-border-color: var(--hover-color);
+    --bs-btn-active-bg: var(--hover-color);
+    --bs-btn-active-border-color: var(--hover-color);
+    --bs-btn-disabled-bg: var(--primary-color);
+    --bs-btn-disabled-border-color: var(--primary-color);
 }
 
 .btn-outline-secondary {
