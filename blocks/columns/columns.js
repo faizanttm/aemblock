@@ -3,7 +3,7 @@ export default function decorate(block) {
   block.classList.add(`columns-${cols.length}-cols`);
   const rows = block.querySelectorAll(':scope > div > div');
   rows.forEach((row,index) => {
-    if(row.textContent == 'section-class'){
+    if(row.textContent === 'section-class'){
       block.parentElement.parentElement.classList.add(rows[index+1].textContent);
       rows[index].remove();
       rows[index+1].remove();
