@@ -334,7 +334,7 @@ header .breadcrumbs ol li[aria-current] {
 @media (width < 768px) {
   header nav .btn {
     font-size: 11px;
-    padding: 8px 11px;
+    padding: 6px 11px;
   }
 
   header nav .nav-brand img {

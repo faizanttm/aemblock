@@ -5,8 +5,7 @@ export default function decorate(block) {
   rows.forEach((row,index) => {
     if(row.textContent === 'section-class'){
       block.parentElement.parentElement.classList.add(rows[index+1].textContent);
-      rows[index].remove();
-      rows[index+1].remove();
+      rows[index].parentElement.remove()
     }
   });
 
