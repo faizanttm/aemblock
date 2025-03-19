@@ -14,35 +14,24 @@
 }
 
 .btn {
-    font-weight: 500;
     padding: 8.5px 14.5px;
     border-radius: 10px;
-    --bs-btn-border-width: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
 }
 
 .btn-primary {
-    --bs-btn-bg: var(--primary-color);
-    --bs-btn-border-color: var(--primary-color);
-    --bs-btn-hover-bg: var(--hover-color);
-    --bs-btn-hover-border-color: var(--hover-color);
-    --bs-btn-active-bg: var(--hover-color);
-    --bs-btn-active-border-color: var(--hover-color);
-    --bs-btn-disabled-bg: var(--primary-color);
-    --bs-btn-disabled-border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 .btn-outline-secondary {
-    --bs-btn-color: #3F3F46;
-    --bs-btn-border-color: #A1A1AA;
-    --bs-btn-hover-bg: #A1A1AA;
-    --bs-btn-hover-border-color: #A1A1AA;
-    --bs-btn-active-bg: #A1A1AA;
-    --bs-btn-active-border-color: #A1A1AA;
-    --bs-btn-disabled-color: #A1A1AA;
-    --bs-btn-disabled-border-color: #A1A1AA;
+    color: #3F3F46;
+    border: 2px solid #A1A1AA;
 }

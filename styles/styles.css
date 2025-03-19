@@ -9,8 +9,8 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+/* @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'); */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'); */
 
 :root {
   /* colors */
@@ -73,7 +73,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -118,13 +118,13 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   body[data-breadcrumbs] {
     --header-height: calc(var(--nav-height) + var(--breadcrumbs-height));
   }
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   :root {
     --nav-height: 105px;
   }
@@ -144,12 +144,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -182,18 +199,18 @@ button {
 }
 
 /* links */
-a:any-link {
+a {
   text-decoration: none;
   word-break: break-word;
+  color: inherit;
 }
 
 a:hover {
-  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
 /* buttons */
-a.button:any-link,
+a.button,
 button {
   box-sizing: border-box;
   display: inline-block;
@@ -255,17 +272,17 @@ main img {
 } */
 
 /* sections */
-main > .section {
+main>.section {
   padding: 100px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1326px;
   margin: auto;
   padding: 0 15px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
@@ -278,6 +295,11 @@ main .section.highlight {
 }
 
 /* hero-banner */
+main .hero-banner {
+  padding: 118px 0 222px;
+  background-color: var(--light-color);
+}
+
 .hero-banner h1 {
   font-size: 50px;
   line-height: 66px;
@@ -316,4 +338,98 @@ main .section.highlight {
   margin: 0;
   display: inline-block;
 }
+
 /* hero-banner */
+
+/* company-brand */
+.company-brand .default-content-wrapper p {
+  margin: 0 0 32px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.company-brand .columns>div {
+  justify-content: center;
+  flex-direction: row !important;
+  align-items: center;
+  column-gap: 92px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.company-brand .columns>div>.columns-img-col {
+  flex: unset;
+}
+
+/* company-brand */
+
+/* improve-worklife */
+.improve-worklife .columns>div {
+  align-items: start;
+}
+
+.improve-worklife .columns-img-col img {
+  margin-left: auto;
+}
+
+/* improve-worklife */
+
+@media (width < 900px) {
+  main>.section {
+    padding: 80px 0;
+  }
+
+  main .hero-banner {
+    padding: 18px 0 122px;
+  }
+
+  .hero-banner h1,
+  .hero-banner ul li:last-child {
+    max-width: 100%;
+  }
+
+  .company-brand .columns>div {
+    column-gap: 60px;
+  }
+}
+
+@media (width < 768px) {
+  main .hero-banner {
+    padding: 18px 0 80px;
+  }
+
+  .hero-banner h1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (width < 576px) {
+  main>.section {
+    padding: 60px 0;
+  }
+
+  main .hero-banner {
+    padding: 18px 0 60px;
+  }
+
+  .hero-banner ul {
+    flex-wrap: wrap;
+    margin: 0 0 30px 0;
+  }
+
+  .hero-banner ul li:last-child {
+    margin-left: -20px;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+
+  .company-brand .columns>div {
+    column-gap: 30px;
+  }
+}
