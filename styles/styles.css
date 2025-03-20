@@ -375,7 +375,119 @@ main .hero-banner {
   margin-left: auto;
 }
 
+.improve-worklife h6 {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.improve-worklife h2 {
+  margin: 0 0 58px 0;
+  font-size: 50px;
+  line-height: 62px;
+  font-weight: 600;
+  max-width: 625px;
+}
+
+.improve-worklife ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.improve-worklife ul li {
+  display: flex;
+  gap: 16px;
+  font-weight: 500;
+}
+
+.improve-worklife ul li img {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  margin-top: 3px;
+}
+
 /* improve-worklife */
+
+/* real-time-analytics */
+.real-time-analytics .columns>div {
+  align-items: start;
+}
+
+.real-time-analytics h6 {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.real-time-analytics h3 {
+  margin: 0 0 28px 0;
+  font-size: 50px;
+  line-height: 62px;
+  font-weight: 600;
+  max-width: 635px;
+}
+
+.real-time-analytics h3+p {
+  border-bottom: 2px solid #F4F4F5;
+  padding-bottom: 60px;
+  margin-bottom: 28px;
+}
+
+.real-time-analytics h3+p+p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0 0 12px 0;
+}
+
+.real-time-analytics h3+p+p+p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* real-time-analytics */
+
+/* success-point */
+.success-point {
+  background-color: #000;
+  color: #fff
+}
+
+.success-point h4 {
+  margin: 0 0 16px 0;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+}
+
+.success-point p {
+  margin: 0 0 32px 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: #A1A1AA;
+}
+
+.success-point p:has(a) {
+  margin: 0;
+  color: #fff;
+}
+
+.success-point p a {
+  font-style: normal;
+  font-weight: 400;
+  border-bottom: 1px solid var(--primary-color);
+}
+/* success-point */
 
 @media (width < 900px) {
   main>.section {
@@ -394,6 +506,11 @@ main .hero-banner {
   .company-brand .columns>div {
     column-gap: 60px;
   }
+
+  .improve-worklife .columns>div,
+  .real-time-analytics .columns>div {
+    align-items: center;
+  }
 }
 
 @media (width < 768px) {
@@ -401,10 +518,38 @@ main .hero-banner {
     padding: 18px 0 80px;
   }
 
-  .hero-banner h1 {
+  .hero-banner h1,
+  .improve-worklife h2,
+  .real-time-analytics h3 {
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 30px;
+  }
+
+  .improve-worklife h6,
+  .real-time-analytics h6 {
+    margin: 0 0 12px 0;
+  }
+
+  .improve-worklife ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  .improve-worklife ul li {
+    font-size: 16px;
+    line-height: 26px;
+    gap: 8px;
+  }
+
+  .improve-worklife ul li img {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .real-time-analytics h3+p {
+    padding-bottom: 30px;
   }
 }
 
