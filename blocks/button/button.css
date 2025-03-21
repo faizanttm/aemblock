@@ -32,6 +32,11 @@
     color: #fff;
 }
 
+.btn-secondary {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
 .btn-outline-secondary {
     color: #3F3F46;
     border: 2px solid #A1A1AA;

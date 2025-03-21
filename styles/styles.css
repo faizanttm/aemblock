@@ -487,7 +487,111 @@ main .hero-banner {
   font-weight: 400;
   border-bottom: 1px solid var(--primary-color);
 }
+
 /* success-point */
+
+/* daily-report */
+.daily-report .columns>div {
+  align-items: start;
+}
+
+.daily-report .columns-img-col img {
+  margin-left: auto;
+}
+
+.daily-report ul:first-child {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 636px;
+  font-size: 21px;
+  line-height: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+
+.daily-report ul:first-child>li {
+  display: flex;
+  gap: 12px;
+}
+
+.daily-report ul:first-child>li img {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+}
+
+.daily-report ul ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* daily-report */
+
+/* benefits */
+.benefits {
+  background-color: #FAFAFA;
+}
+
+.benefits .columns>div {
+  align-items: start;
+}
+
+.benefits .columns>div>div:first-child h3 {
+  margin: 0 0 19px 0;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  max-width: 525px;
+}
+
+.benefits .columns>div>div:first-child p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 525px;
+}
+
+.benefits table tr td:nth-child(1) {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.benefits table tr td:nth-child(2) {
+  background-color: #fff;
+}
+
+.benefits table tr td {
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.benefits table tr td p {
+  margin: 0;
+}
+
+.benefits table tr td ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px 0;
+}
+
+.benefits table tr td h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.benefits table tr td h4 strong {
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: 700;
+}
+
+/* benefits */
 
 @media (width < 900px) {
   main>.section {
@@ -510,6 +614,25 @@ main .hero-banner {
   .improve-worklife .columns>div,
   .real-time-analytics .columns>div {
     align-items: center;
+  }
+
+  .success-point .columns>div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 50px;
+  }
+
+  .success-point .columns>div>div {
+    flex: calc(50% - 12px);
+  }
+
+  .success-point h4 {
+    margin: 0 0 8px 0;
+  }
+
+  .success-point p {
+    margin: 0 0 16px 0;
   }
 }
 
@@ -551,6 +674,17 @@ main .hero-banner {
   .real-time-analytics h3+p {
     padding-bottom: 30px;
   }
+
+  .success-point h4 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .hero-banner ul li img {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+  }
 }
 
 @media (width < 576px) {
@@ -576,5 +710,14 @@ main .hero-banner {
 
   .company-brand .columns>div {
     column-gap: 30px;
+  }
+
+  .success-point .columns>div>div {
+    flex: 100%;
+  }
+
+  .success-point h4 {
+    font-size: 30px;
+    line-height: 38px;
   }
 }
