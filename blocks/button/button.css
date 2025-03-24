@@ -25,6 +25,7 @@
     line-height: 24px;
     font-weight: 500;
     border: 2px solid transparent;
+    min-width: 150px;
 }
 
 .btn-primary {
@@ -35,9 +36,16 @@
 .btn-secondary {
     background-color: #fff;
     color: var(--primary-color);
+    font-style: normal;
 }
 
 .btn-outline-secondary {
     color: #3F3F46;
     border: 2px solid #A1A1AA;
+}
+
+@media (width < 576px) {
+    .btn {
+        min-width: auto;
+    }
 }

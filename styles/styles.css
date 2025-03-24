@@ -381,6 +381,7 @@ main .hero-banner {
   line-height: 24px;
   font-weight: 600;
   color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 .improve-worklife h2 {
@@ -426,6 +427,7 @@ main .hero-banner {
   line-height: 24px;
   font-weight: 600;
   color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 .real-time-analytics h3 {
@@ -554,6 +556,11 @@ main .hero-banner {
   max-width: 525px;
 }
 
+.benefits table tr {
+  display: flex;
+  gap: 24px;
+}
+
 .benefits table tr td:nth-child(1) {
   background-color: var(--primary-color);
   color: #fff;
@@ -567,6 +574,7 @@ main .hero-banner {
   border-radius: 12px;
   padding: 30px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
 }
 
 .benefits table tr td p {
@@ -577,6 +585,11 @@ main .hero-banner {
   list-style: none;
   padding: 0;
   margin: 0 0 36px 0;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .benefits table tr td h4 {
@@ -591,7 +604,113 @@ main .hero-banner {
   font-weight: 700;
 }
 
+.benefits table tr td p:nth-child(1) {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.benefits table tr td p:nth-child(2) {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.benefits table tr td h4 {
+  margin: 0 0 36px 0;
+  padding-bottom: 20px;
+}
+
+.benefits table tr td:nth-child(1) h4 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.benefits table tr td:nth-child(2) h4 {
+  border-bottom: 1px solid rgba(88, 158, 156, 0.10);
+}
+
 /* benefits */
+
+/* faq */
+.faq {
+  background-color: #000;
+  color: #fff;
+}
+
+.faq .columns h6 {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.faq .columns h3 {
+  margin: 0 0 100px 0;
+  font-size: 70px;
+  line-height: 90px;
+  font-weight: 400;
+}
+
+/* faq */
+
+/* blog */
+.blog h6 {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.blog h3 {
+  margin: 0 0 60px 0;
+  font-size: 50px;
+  line-height: 62px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.blog .cards>ul {
+  gap: 80px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.blog .cards>ul>li {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.blog .cards>ul>li:hover {
+  box-shadow: none;
+}
+
+.blog .cards>ul>li img {
+  border-radius: 20px;
+}
+
+.blog .cards .card-body {
+  padding: 32px 0 0 0;
+}
+
+.blog .cards .card-body h4 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.blog .cards .card-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* blog */
 
 @media (width < 900px) {
   main>.section {
@@ -612,7 +731,9 @@ main .hero-banner {
   }
 
   .improve-worklife .columns>div,
-  .real-time-analytics .columns>div {
+  .real-time-analytics .columns>div,
+  .daily-report .columns>div,
+  .benefits .columns>div {
     align-items: center;
   }
 
@@ -634,6 +755,32 @@ main .hero-banner {
   .success-point p {
     margin: 0 0 16px 0;
   }
+
+  .daily-report .columns>div>div {
+    width: 100%;
+  }
+
+  .daily-report .columns-img-col img {
+    margin-right: auto;
+  }
+
+  .benefits .columns>div {
+    text-align: center;
+  }
+
+  .faq .columns h6 {
+    margin: 0 0 10px 0;
+  }
+
+  .faq .columns h3 {
+    margin: 0 0 50px 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .blog .cards>ul {
+    gap: 20px;
+  }
 }
 
 @media (width < 768px) {
@@ -643,14 +790,17 @@ main .hero-banner {
 
   .hero-banner h1,
   .improve-worklife h2,
-  .real-time-analytics h3 {
+  .real-time-analytics h3,
+  .benefits .columns>div>div:first-child h3,
+  .blog h3 {
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 30px;
   }
 
   .improve-worklife h6,
-  .real-time-analytics h6 {
+  .real-time-analytics h6,
+  .blog h6 {
     margin: 0 0 12px 0;
   }
 
@@ -684,6 +834,16 @@ main .hero-banner {
     width: 43px;
     height: 43px;
     min-width: 43px;
+  }
+
+  .blog .cards .card-body {
+    padding: 10px 0 0 0;
+  }
+
+  .blog .cards .card-body h4 {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -719,5 +879,19 @@ main .hero-banner {
   .success-point h4 {
     font-size: 30px;
     line-height: 38px;
+  }
+
+  .benefits .columns>div>div,
+  .benefits table {
+    width: 100%;
+  }
+
+  .benefits table tr {
+    flex-direction: column;
+  }
+
+  .blog .cards>ul {
+    gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
