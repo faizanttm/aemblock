@@ -277,7 +277,7 @@ main>.section {
 }
 
 main>.section>div {
-  max-width: 1326px;
+  max-width: 1296px;
   margin: auto;
   padding: 0 15px;
 }
@@ -712,6 +712,103 @@ main .hero-banner {
 
 /* blog */
 
+/* newsletter */
+.newsletter {
+  background-color: var(--light-color);
+}
+
+.newsletter .form {
+  padding: 80px 20px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: var(--primary-color);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.newsletter .form::before,
+.newsletter .form::after {
+  content: "";
+  position: absolute;
+  width: 278px;
+  height: 229px;
+  border-radius: 100%;
+  border: 7px solid #fff;
+}
+
+.newsletter .form::before {
+  top: -156px;
+  left: -128px;
+  opacity: 0.20;
+}
+
+.newsletter .form::after {
+  bottom: -156px;
+  right: -128px;
+}
+
+.newsletter .form form {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter .heading-wrapper h2 {
+  margin: 0 0 50px 0;
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.newsletter .form fieldset {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 13px;
+}
+
+.newsletter .form form>.field-wrapper+.field-wrapper {
+  margin-top: 0;
+}
+
+.newsletter .form label {
+  margin: 0;
+}
+
+.newsletter .form input {
+  padding: 16px 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  color: #fff;
+  border-radius: 9px;
+}
+
+.newsletter .form input:hover {
+  border: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+.newsletter .form input::placeholder {
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.newsletter .form .form-action button {
+  margin: 0;
+  background-color: #fff;
+  color: var(--primary-color);
+  border-radius: 9px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  height: 100%;
+  padding: 15px 60px;
+  border: none;
+}
+
+.newsletter .form form fieldset .field-wrapper+.field-wrapper {
+  margin-top: 0;
+}
+
+/* newsletter */
+
 @media (width < 900px) {
   main>.section {
     padding: 80px 0;
@@ -781,6 +878,23 @@ main .hero-banner {
   .blog .cards>ul {
     gap: 20px;
   }
+
+  .newsletter .form::before,
+  .newsletter .form::after {
+    width: 150px;
+    height: 120px;
+    border-width: 5px;
+  }
+
+  .newsletter .form::before {
+    top: -80px;
+    left: -90px;
+  }
+
+  .newsletter .form::after {
+    bottom: -80px;
+    right: -90px;
+  }
 }
 
 @media (width < 768px) {
@@ -792,7 +906,8 @@ main .hero-banner {
   .improve-worklife h2,
   .real-time-analytics h3,
   .benefits .columns>div>div:first-child h3,
-  .blog h3 {
+  .blog h3,
+  .newsletter .heading-wrapper h2 {
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 30px;
@@ -845,6 +960,15 @@ main .hero-banner {
     font-size: 18px;
     line-height: 24px;
   }
+
+  .newsletter .form fieldset {
+    flex-direction: column;
+  }
+
+  .newsletter .form input,
+  .newsletter .form .form-action button {
+    max-width: 100%;
+  }
 }
 
 @media (width < 576px) {
@@ -893,5 +1017,14 @@ main .hero-banner {
   .blog .cards>ul {
     gap: 40px;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .newsletter .form {
+    padding: 50px 20px;
+  }
+
+  .newsletter .form input,
+  .newsletter .form .form-action button {
+    padding: 8px 16px;
   }
 }

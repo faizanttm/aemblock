@@ -14,7 +14,7 @@ header nav {
   align-items: center;
   gap: 0 16px;
   margin: auto;
-  max-width: 1248px;
+  max-width: 1326px;
   height: var(--nav-height);
   padding: 0 15px;
   font-family: var(--body-font-family);
@@ -120,11 +120,6 @@ header .nav-brand {
   line-height: 1;
 }
 
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
-
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
@@ -146,6 +141,7 @@ header nav .nav-sections ul {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin: 0;
 }
 
 header nav .nav-sections ul>li {
@@ -220,7 +216,6 @@ header .breadcrumbs ol li[aria-current] {
     display: flex;
     justify-content: space-between;
     gap: 0 47px;
-    max-width: 1326px;
   }
 
   header nav[aria-expanded='true'] {
@@ -339,5 +334,6 @@ header .breadcrumbs ol li[aria-current] {
 
   header nav .nav-brand img {
     width: 100px;
+    height: auto;
   }
 }
