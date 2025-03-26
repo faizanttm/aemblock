@@ -3,8 +3,9 @@ export default function decorate(block) {
   block.classList.add(`columns-${cols.length}-cols`);
   const rows = block.querySelectorAll(':scope > div > div');
   rows.forEach((row,index) => {
-    if(row.textContent === 'section-class'){
+    if(row.textContent === 'class-id'){
       block.parentElement.parentElement.classList.add(rows[index+1].textContent);
+      block.parentElement.parentElement.setAttribute("id", rows[index+1].textContent);
       rows[index].parentElement.remove()
     }
   });

@@ -26,22 +26,47 @@
     font-weight: 500;
     border: 2px solid transparent;
     min-width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:after {
+    background: var(--primary-color);
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 1.5s cubic-bezier(.19, 1, .22, 1);
+    width: 50px;
+    z-index: 1;
+}
+
+.btn.btn-primary:after {
+    background: var(--white);
+}
+
+button:hover:after,
+.btn:hover:after {
+    left: 120%;
+    transition: all 1.5s cubic-bezier(.19, 1, .22, 1);
 }
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--white);
 }
 
 .btn-secondary {
-    background-color: #fff;
+    background-color: var(--white);
     color: var(--primary-color);
     font-style: normal;
 }
 
 .btn-outline-secondary {
-    color: #3F3F46;
-    border: 2px solid #A1A1AA;
+    border: 2px solid var(--border-color);
 }
 
 @media (width < 576px) {
