@@ -131,6 +131,10 @@ header nav .nav-brand img {
   object-fit: contain;
 }
 
+header nav .nav-brand picture {
+  display: flex;
+}
+
 /* sections */
 header nav .nav-sections {
   grid-area: sections;
