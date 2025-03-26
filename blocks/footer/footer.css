@@ -37,6 +37,12 @@ footer .footer>div {
   display: flex;
 }
 
+.footer-main .columns>div>div:first-child p:first-child a picture img {
+  width: 113px;
+  height: 37px;
+  object-fit: contain;
+}
+
 .footer-main .columns>div>div:first-child p:nth-child(2) {
   font-size: 14px;
   line-height: 22px;
@@ -57,11 +63,10 @@ footer .footer>div {
 
 .footer-main .columns>div>div:first-child ul li a img {
   transition: 0.3s all ease-in-out;
-  filter: contrast(0.5);
 }
 
 .footer-main .columns>div>div:first-child ul li a img:hover {
-  filter: contrast(1);
+  filter: contrast(0);
 }
 
 .footer-main .columns>div>div:not(:first-child) h6 {
@@ -84,11 +89,33 @@ footer .footer>div {
   line-height: 22px;
 }
 
+.footer-main .columns>div>div:not(:first-child) ul li a {
+  position: relative;
+}
+
+.footer-main .columns>div>div:not(:first-child) ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 300ms transform ease-out;
+}
+
+.footer-main .columns>div>div:not(:first-child) ul li a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 .footer-copyright p {
   margin: 0;
   font-size: 14px;
   line-height: 22px;
-  color: #71717A;
+  color: var(--muted-color);
   text-align: center;
 }
 
@@ -137,5 +164,9 @@ footer .footer>div {
 
   footer .footer>div {
     padding: 0 15px 30px;
+  }
+
+  .footer-copyright p {
+    font-size: 12px;
   }
 }

@@ -147,3 +147,29 @@ async function loadPage() {
 }
 
 loadPage();
+
+// on scroll add class
+document.addEventListener('DOMContentLoaded', function () {
+  const checkElement = setInterval(() => {
+    const targetElement = document.querySelector('.nav-wrapper');
+    if (targetElement) {
+      clearInterval(checkElement);
+      window.addEventListener('scroll', () => {
+        targetElement.classList.toggle('scrolled', window.scrollY > 100);
+      });
+    }
+  }, 100);
+});
+// on scroll add class
+
+// add class in newsletter
+document.addEventListener("DOMContentLoaded", function () {
+  const checkElement = setInterval(() => {
+    const button = document.querySelector(".form-action button");
+    if (button) {
+      clearInterval(checkElement);
+      button.classList.add("btn");
+    }
+  }, 100);
+});
+// add class in newsletter

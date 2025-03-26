@@ -14,6 +14,9 @@
 
 :root {
   /* colors */
+  --white: #fff;
+  --black: #000;
+
   --background-color: white;
   --light-color: #fafafa;
   --dark-color: #505050;
@@ -88,6 +91,11 @@
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 100px;
 }
 
 body {
@@ -203,10 +211,6 @@ a {
   text-decoration: none;
   word-break: break-word;
   color: inherit;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 /* buttons */
@@ -439,7 +443,7 @@ main .hero-banner {
 }
 
 .real-time-analytics h3+p {
-  border-bottom: 2px solid #F4F4F5;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 60px;
   margin-bottom: 28px;
 }
@@ -461,8 +465,8 @@ main .hero-banner {
 
 /* success-point */
 .success-point {
-  background-color: #000;
-  color: #fff
+  background-color: var(--black);
+  color: var(--white)
 }
 
 .success-point h4 {
@@ -476,18 +480,23 @@ main .hero-banner {
   margin: 0 0 32px 0;
   font-size: 16px;
   line-height: 26px;
-  color: #A1A1AA;
+  color: var(--muted-color);
 }
 
 .success-point p:has(a) {
   margin: 0;
-  color: #fff;
+  color: var(--white);
 }
 
 .success-point p a {
   font-style: normal;
   font-weight: 400;
   border-bottom: 1px solid var(--primary-color);
+  transition: 0.2s all ease-in-out;
+}
+
+.success-point p a:hover {
+  color: var(--primary-color);
 }
 
 /* success-point */
@@ -534,7 +543,7 @@ main .hero-banner {
 
 /* benefits */
 .benefits {
-  background-color: #FAFAFA;
+  background-color: var(--light-color);
 }
 
 .benefits .columns>div {
@@ -563,11 +572,11 @@ main .hero-banner {
 
 .benefits table tr td:nth-child(1) {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--white);
 }
 
 .benefits table tr td:nth-child(2) {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .benefits table tr td {
@@ -632,8 +641,8 @@ main .hero-banner {
 
 /* faq */
 .faq {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .faq .columns h6 {
@@ -673,7 +682,7 @@ main .hero-banner {
 }
 
 .blog .cards>ul {
-  gap: 80px;
+  gap: 40px;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -685,6 +694,10 @@ main .hero-banner {
 
 .blog .cards>ul>li:hover {
   box-shadow: none;
+}
+
+.blog .cards .card-image p {
+  margin: 0;
 }
 
 .blog .cards>ul>li img {
@@ -720,7 +733,7 @@ main .hero-banner {
 .newsletter .form {
   padding: 80px 20px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--white);
   background-color: var(--primary-color);
   text-align: center;
   overflow: hidden;
@@ -734,7 +747,7 @@ main .hero-banner {
   width: 278px;
   height: 229px;
   border-radius: 100%;
-  border: 7px solid #fff;
+  border: 7px solid var(--white);
 }
 
 .newsletter .form::before {
@@ -778,7 +791,7 @@ main .hero-banner {
   padding: 16px 20px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.30);
-  color: #fff;
+  color: var(--white);
   border-radius: 9px;
 }
 
@@ -792,7 +805,7 @@ main .hero-banner {
 
 .newsletter .form .form-action button {
   margin: 0;
-  background-color: #fff;
+  background-color: var(--white);
   color: var(--primary-color);
   border-radius: 9px;
   font-size: 18px;
@@ -898,6 +911,10 @@ main .hero-banner {
 }
 
 @media (width < 768px) {
+  html {
+    scroll-padding-block-start: 70px;
+  }
+
   main .hero-banner {
     padding: 18px 0 80px;
   }
