@@ -584,6 +584,7 @@ main .hero-banner {
   padding: 30px;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+  width: 50%;
 }
 
 .benefits table tr td p {
@@ -1029,6 +1030,10 @@ main .hero-banner {
 
   .benefits table tr {
     flex-direction: column;
+  }
+
+  .benefits table tr td {
+    width: auto;
   }
 
   .blog .cards>ul {
